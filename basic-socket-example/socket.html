@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.io-Shatish_Desai</title>
+  </head>
+  <body></body>
+  <script>
+    const socket = new WebSocket("ws://localhost:8080", "a");
+    console.log("socket -->", socket);
+
+    socket.onmessage = (event) => console.log("event onmessage -->", event);
+    socket.onopen = (event) => socket.send("message from Frontend @✨");
+  </script>
+</html>
